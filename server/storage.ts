@@ -9,10 +9,13 @@ import {
 import { eq, like } from "drizzle-orm";
 
 import session from "express-session";
-// @ts-ignore
-import connectSqlite from "connect-sqlite3";
+import connectPgSimple from "connect-pg-simple";
+import { Pool } from "pg";
 
-const SqliteStore = connectSqlite(session);
+const PgStore = connectPgSimple(session);
+const pool = new Pool({
+  connectionString: process.env.DATABASE_URL || "postgresql://localhost:5432/suss-sis",
+});
 
 export interface IStorage {
   sessionStore: session.Store;
@@ -41,9 +44,9 @@ export class DatabaseStorage implements IStorage {
   sessionStore: session.Store;
 
   constructor() {
-    this.sessionStore = new SqliteStore({
-      db: 'sessions.db',
-      dir: '.',
+    this.sessionStore = new PgStore({
+      pool: pool,
+      tableName: 'session',
     });
   }
 

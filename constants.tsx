@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Category, MenuItem, CakeDesign } from './types';
+import logo from './logo-susssis.png';
 
 export const COLORS = {
   cream: '#FFFFFF',
@@ -80,8 +81,5 @@ export const CAKE_DESIGNS: CakeDesign[] = [
   { id: 'cd3', name: 'Unicorn Dream', image: 'https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&q=80&w=600', basePrice: 1500 }
 ];
 
-export const LOGO_SVG = (
-  <svg width="40" height="40" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M50 20C30 20 20 35 20 50C20 65 30 80 50 80C70 80 80 65 80 50C80 35 70 20 50 20ZM50 70C38 70 30 62 30 50C30 38 38 30 50 30C62 30 70 38 70 50C70 62 62 70 50 70Z" fill="#ac2729" />
-  </svg>
-);
+export const LOGO_IMAGE = logo;
+

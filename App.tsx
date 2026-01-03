@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { HashRouter as Router, Routes, Route, Link, useLocation, useNavigate } from 'react-router-dom';
 import { ShoppingCart, Menu as MenuIcon, X, Phone, Instagram, MapPin, User as UserIcon, LogIn, ChevronRight, Cake, Package, LogOut } from 'lucide-react';
 import { MenuItem, CartItem, Category, User, CMSContent } from './types';
-import { CONTACT_INFO, LOGO_SVG, INITIAL_MENU } from './constants';
+import { CONTACT_INFO, LOGO_IMAGE, INITIAL_MENU } from './constants';
 
 // Pages
 import HomePage from './pages/HomePage';
@@ -56,17 +56,22 @@ const Layout = ({
 
   return (
     <div className="flex flex-col min-h-screen bg-[#fdf0e9]">
-      <nav className="sticky top-0 z-50 bg-[#fdf0e9]/95 backdrop-blur-md border-b border-[#ac2729]/10 shadow-sm">
+      <nav className="sticky top-0 z-50 bg-[#ffffff]/95 backdrop-blur-md border-b border-[#ac2729]/10 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
-            <Link to="/" className="flex items-center space-x-2">
-              <div className="text-[#ac2729] font-black text-2xl serif tracking-tighter flex items-center gap-2">
-                <span className="hidden sm:inline">{LOGO_SVG}</span>
-                Suss Sis
-              </div>
-            </Link>
+            <Link to="/" className="flex items-center gap-3">
+  <img
+    src={LOGO_IMAGE}
+    alt="Suss Sis Bakery Logo"
+    className="h-12 w-auto shrink-0"
+  />
+  <span className="text-[#ac2729] font-black text-xl serif tracking-tighter whitespace-nowrap">
+    Suss Sis Gourmet Bakery & Cafe
+  </span>
+</Link>
 
-            <div className="hidden lg:flex items-center space-x-8 text-[11px] font-black uppercase tracking-[0.2em] text-[#ac2729]">
+
+            <div className="hidden lg:flex items-center space-x-9 text-[12px] font-black uppercase tracking-[0.1em] text-[#330000]">
               <Link to="/" className="hover:opacity-70 transition-opacity">Home</Link>
               <Link to="/about" className="hover:opacity-70 transition-opacity">Our Story</Link>
               <Link to="/menu" className="hover:opacity-70 transition-opacity">Menu</Link>

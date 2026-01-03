@@ -4,6 +4,14 @@ import { Link } from 'react-router-dom';
 import { ChevronRight, Heart, Award, Users, ShoppingBag } from 'lucide-react';
 import { MenuItem } from '../types';
 
+import { 
+  NameOriginIcon, 
+  FoundingIcon, 
+  EssenceIcon, 
+  CurvedArrowLeft, 
+  CurvedArrowRight 
+} from '../icons';
+
 interface Props {
   cms: any;
   menu: MenuItem[];
@@ -72,106 +80,14 @@ export default function HomePage({ cms, menu }: Props) {
 
 
 
-      {/* About suss sis*/}
-     <section className="bg-[#f6f4ee] py-28">
-  <div className="max-w-7xl mx-auto px-4">
-
-    {/* Top Row */}
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-16 items-start mb-24">
-
-      {/* OUR STORY */}
-      <h2 className="text-[#ac2729] text-6xl md:text-7xl font-serif font-bold leading-tight">
-        OUR<br />STORY
-      </h2>
-
-      {/* SUSS SIS Meaning */}
-      <div className="md:col-span-2 text-center space-y-6">
-        <h3 className="text-[#ac2729] text-4xl md:text-5xl font-serif font-bold">
-          SUSS SIS
-        </h3>
-        <div className="flex justify-center items-center gap-10 text-[#ac2729] text-sm font-semibold tracking-widest uppercase">
-          <span>Sweet</span>
-          <span className="opacity-50">↔</span>
-          <span>Sisters</span>
-        </div>
-      </div>
-    </div>
-
-    {/* Bottom Columns */}
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-16 text-center">
-
-      {/* Name Origin */}
-      <div className="space-y-6">
-        <h4 className="text-[#ac2729] text-xl font-serif font-bold uppercase tracking-wider">
-          Name Origin
-        </h4>
-        <p className="text-[#6b4a4a] text-sm leading-relaxed max-w-sm mx-auto">
-          <strong>"Suss"</strong> symbolizes sweetness, mirroring the delightful
-          flavors in our treats.<br /><br />
-          <strong>"Sis"</strong> stands for the bonds of sisterhood and community
-          that inspire our creations.
-        </p>
-      </div>
-
-      {/* Founding */}
-      <div className="space-y-6">
-        <h4 className="text-[#ac2729] text-xl font-serif font-bold uppercase tracking-wider">
-          Founding
-        </h4>
-        <p className="text-[#6b4a4a] text-sm leading-relaxed max-w-sm mx-auto">
-          What began as a home kitchen has grown into a beloved bakery,
-          café & kitchen known for its warm atmosphere and exceptional products.
-        </p>
-      </div>
-
-      {/* Essence */}
-      <div className="space-y-6">
-        <h4 className="text-[#ac2729] text-xl font-serif font-bold uppercase tracking-wider">
-          Essence
-        </h4>
-        <p className="text-[#6b4a4a] text-sm leading-relaxed max-w-sm mx-auto">
-          We celebrate sweet moments and connections with baked goods
-          that create lasting memories.
-        </p>
-      </div>
-
-    </div>
-  </div>
-</section>
- 
-{/* Google Reviews Section */}
-<section className="bg-[#f6f4ee] py-24">
-  <div className="max-w-7xl mx-auto px-4 text-center space-y-10">
-    
-    <h2 className="text-4xl md:text-5xl font-serif font-bold text-[#ac2729]">
-      Loved by Our Customers
-    </h2>
-
-    <p className="text-[#6b4a4a] max-w-2xl mx-auto">
-      Real stories, real experiences — directly from Google Reviews.
-    </p>
-
-    <div className="w-full h-[450px] rounded-3xl overflow-hidden shadow-xl border border-[#ac2729]/10">
-      <iframe
-        src="PASTE_YOUR_GOOGLE_EMBED_URL_HERE"
-        width="100%"
-        height="100%"
-        loading="lazy"
-        referrerPolicy="no-referrer-when-downgrade"
-        className="border-0"
-      />
-    </div>
-
-  </div>
-</section>
 
       {/* Best Sellers */}
       <section className="bg-white py-32 border-y border-[#ac2729]/5">
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex justify-between items-end mb-20">
             <div className="max-w-xl">
-              <span className="text-[#ac2729] text-[10px] font-bold uppercase tracking-[0.5em] mb-4 block">Hand-picked</span>
-              <h2 className="text-5xl serif font-bold text-[#ac2729] leading-tight">Trending Treats</h2>
+              <span className="text-[#ac2729] text-[10px] font-bold uppercase tracking-[0.5em] mb-4 block">Signature Cakes</span>
+              <h2 className="text-5xl serif font-bold text-[#ac2729] leading-tight">Best Sellers</h2>
             </div>
             <Link to="/menu" className="hidden md:flex text-[#ac2729] font-bold text-xs uppercase tracking-[0.3em] items-center gap-2 group">
               Full Menu <ChevronRight size={16} className="group-hover:translate-x-2 transition-transform" />
@@ -201,6 +117,91 @@ export default function HomePage({ cms, menu }: Props) {
           </div>
         </div>
       </section>
+
+      {/*our stoty*/}
+      <section className="py-20 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto flex flex-col items-center">
+      {/* Top Header Grid */}
+      <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-start mb-24">
+        {/* Left Side: Title */}
+        <div className="flex flex-col">
+          <h1 className="text-[#8f2223] text-7xl md:text-8xl lg:text-9xl font-display font-bold leading-[0.9] tracking-tighter">
+  OUR <br /> STORY
+</h1>
+
+        </div>
+
+        {/* Right Side: Brand Origin Diagram */}
+        <div className="flex flex-col items-center md:items-end justify-center pt-8 md:pt-16 pr-0 md:pr-12">
+          <div className="text-4xl md:text-5xl lg:text-6xl font-display text-primary font-medium mb-12">
+            SUSS SIS
+          </div>
+          
+          <div className="relative flex justify-between w-full max-w-sm">
+            {/* Sweet Column */}
+            <div className="flex flex-col items-center group">
+              <CurvedArrowLeft className="w-16 h-12 text-primary opacity-60 absolute -top-12 left-1/4 -translate-x-1/2" />
+              <span className="font-hand text-2xl lg:text-3xl text-primary mt-2">SWEET</span>
+            </div>
+
+            {/* Sisters Column */}
+            <div className="flex flex-col items-center group">
+              <CurvedArrowRight className="w-16 h-12 text-primary opacity-60 absolute -top-12 right-1/4 translate-x-1/2" />
+              <span className="font-hand text-2xl lg:text-3xl text-primary mt-2">SISTERS</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Feature Columns Grid */}
+      <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-16 lg:gap-24 mb-20">
+        {/* Name Origin */}
+        <div className="flex flex-col items-center text-center">
+          <div className="mb-8 w-24 h-24 flex items-center justify-center">
+            <NameOriginIcon className="w-20 h-20 text-primary opacity-90 transform -rotate-12" />
+          </div>
+          <h3 className="font-hand text-3xl lg:text-4xl text-primary font-bold mb-6 tracking-wide uppercase">
+            NAME ORIGIN
+          </h3>
+          <div className="space-y-4 text-text-light font-body text-lg lg:text-xl leading-relaxed max-w-xs">
+            <p>
+              <span className="font-bold text-primary">"Suss"</span> Symbolizes <span className="font-bold text-primary italic">sweetness</span>, mirroring the delightful flavors in our treats.
+            </p>
+            <p>
+              <span className="font-bold text-primary">"SIS"</span> stands for the bonds of <span className="font-bold text-primary italic">sisterhood</span> and community that inspire our creations.
+            </p>
+          </div>
+        </div>
+
+        {/* Founding */}
+        <div className="flex flex-col items-center text-center">
+          <div className="mb-8 w-24 h-24 flex items-center justify-center">
+            <FoundingIcon className="w-20 h-20 text-primary opacity-90" />
+          </div>
+          <h3 className="font-hand text-3xl lg:text-4xl text-primary font-bold mb-6 tracking-wide uppercase">
+            FOUNDING
+          </h3>
+          <p className="text-text-light font-body text-lg lg:text-xl leading-relaxed max-w-xs">
+            What began as a home kitchen has grown into a beloved bakery, cafe & kitchen known for its warm atmosphere and exceptional products.
+          </p>
+        </div>
+
+        {/* Essence */}
+        <div className="flex flex-col items-center text-center">
+          <div className="mb-8 w-24 h-24 flex items-center justify-center">
+            <EssenceIcon className="w-20 h-20 text-primary opacity-90" />
+          </div>
+          <h3 className="font-hand text-3xl lg:text-4xl text-primary font-bold mb-6 tracking-wide uppercase">
+            ESSENCE
+          </h3>
+          <p className="text-text-light font-body text-lg lg:text-xl leading-relaxed max-w-xs">
+            We celebrate sweet moments and connections with baked goods that create lasting memories.
+          </p>
+        </div>
+      </div>
+
+      {/* Bottom Accent */}
+      <div className="w-32 h-1 bg-primary/20 rounded-full"></div>
+    </section>
     </div>
   );
 }

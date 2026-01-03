@@ -138,7 +138,32 @@ export default function HomePage({ cms, menu }: Props) {
     </div>
   </div>
 </section>
+ 
+{/* Google Reviews Section */}
+<section className="bg-[#f6f4ee] py-24">
+  <div className="max-w-7xl mx-auto px-4 text-center space-y-10">
+    
+    <h2 className="text-4xl md:text-5xl font-serif font-bold text-[#ac2729]">
+      Loved by Our Customers
+    </h2>
 
+    <p className="text-[#6b4a4a] max-w-2xl mx-auto">
+      Real stories, real experiences — directly from Google Reviews.
+    </p>
+
+    <div className="w-full h-[450px] rounded-3xl overflow-hidden shadow-xl border border-[#ac2729]/10">
+      <iframe
+        src="PASTE_YOUR_GOOGLE_EMBED_URL_HERE"
+        width="100%"
+        height="100%"
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+        className="border-0"
+      />
+    </div>
+
+  </div>
+</section>
 
       {/* Best Sellers */}
       <section className="bg-white py-32 border-y border-[#ac2729]/5">
